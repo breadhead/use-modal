@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# 1.0.0 (2019-05-08)
+
+
+### chore
+
+* initial commit ([e90246c](https://github.com/breadhead/use-modal/commit/e90246c))
+
+
+### BREAKING CHANGES
+
+* initial release
+
+
+
 ## [0.2.2](https://github.com/breadhead/use-query/compare/v0.2.1...v0.2.2) (2019-05-07)
 
 
