@@ -1,0 +1,46 @@
+{
+  "name": "@breadhead/use-modal",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breadhead/use-modal.git"
+  },
+  "description": "React hook for easy work with modals",
+  "author": "Igor Kamyshev <igor@kamyshev.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@solid-soda/scripts": "^1.6.3",
+    "@team-griffin/install-self-peers": "^1.1.1",
+    "typescript": "^3.4.1"
+  },
+  "keywords": [
+    "react",
+    "react hook",
+    "modal",
+    "breadhead"
+  ],
+  "peerDependencies": {
+    "@breadhead/use-query": ">= 0.3",
+    "react": ">= 16.8",
+    "react-dom": ">= 16.8"
+  },
+  "dependencies": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn soda lint-staged",
+      "commit-msg": "yarn soda commitlint"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest",
+    "s": "yarn soda",
+    "build": "tsc --skipLibCheck",
+    "prepare": "install-self-peers -- --ignore-scripts && yarn build",
+    "types": "tsc",
+    "ci": "yarn s lint && yarn types && yarn test"
+  }
+}
