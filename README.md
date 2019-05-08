@@ -1,56 +1,63 @@
-# use-query
+# use-modal
 
-A react hook for easily synchronizing query string (e.g. http://your-url?yourParam=someValue) with react context.
-Works with any client router through history API.
+Extra simple react hook for easily works with URL-oriented modals. Works with any client router.
 
 ## Installation
 
-`yarn add @breadhead/use-query`
+`yarn add @breadhead/use-modal`
+
+> Warning! Lib uses [`@breadhead/use-query`](https://github.com/breadhead/use-query) for handling query. Please, install and setup it.
 
 ### Usage
 
-It just works.
+It provides `<ModalContextProvider />`, which makes the lib available to the rest of your app:.
 
 ```js
-// Navigation.jsx
-import { useQuery } from "@breadhead/use-query";
-
-export const Navigation = () => {
-  const { param }  = useQuery();
-
-  // ...some code
-
-  return <p>{param}</p>
-};
-```
-
-If you want use it with SSR, just add `QueryContextProvider`
-
-```js
-// QueryContextApp.js
-import { QueryContextProvider } from "@breadhead/use-query";
+// ModalContextApp.js
+import { ModalContextProvider } from "@breadhead/use-modal";
 import App from './App';
 
 export class QueryContextApp {
   public render() {
-    const query = ... // get query from request
+    const pushRoute = (url) => {
+      // change route by any router
+    }
 
     return (
-      <QueryContextProvider initial={query}>
+      <ModalContextProvider pushRoute={pushRoute}>
         <App />
-      </QueryContextProvider>
+      </ModalContextProvider>
       );
   };
 }
 ```
 
-#### Next.js
-
-If your app builded with [Next.js](https://nextjs.org/) you can use built-in `nextWithQuery` HOC:
-
+Now, you can use `useModalState` and `useModalActions` in any place of your app.
 ```js
-// _app.js
-import { nextWithQuery } from "@breadhead/use-query";
+// ContactsModal.jsx
+import { useModalState, useModalActions } from "@breadhead/use-modal";
 
-export default nextWithQuery(Application);
+const MODAL_KEY = 'myUniqKey';
+
+export const ContactsModal = () => {
+  const modalIsOpen  = useModalState(MODAL_KEY);
+  const { open, close } = useModalActions(MODAL_KEY);
+
+  // ...some code
+
+  return (
+    <>
+      <button onClick={open}>OPEN</button>
+
+      {modalIsOpen && (
+        <div>
+          <h1>It is my modal!</h1>
+          <button onClick={close}>CLOSE</button>
+        </div>
+      )}
+    </>
+  )
+};
 ```
+
+If you want use it with SSR, just read the documentation of [`@breadhead/use-query`](https://github.com/breadhead/use-query).
