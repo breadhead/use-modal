@@ -40,7 +40,7 @@
     "s": "yarn soda",
     "build": "tsc --skipLibCheck",
     "prepare": "install-self-peers -- --ignore-scripts && yarn build",
-    "types": "tsc",
+    "types": "tsc --skipLibCheck",
     "ci": "yarn s lint && yarn types && yarn test"
   }
 }
