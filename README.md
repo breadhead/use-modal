@@ -40,18 +40,18 @@ import { useModalState, useModalActions } from "@breadhead/use-modal";
 const MODAL_KEY = 'myUniqKey';
 
 export const ContactsModal = () => {
-  const modalIsOpen  = useModalState(MODAL_KEY);
+  const modalValue = useModalState(MODAL_KEY);
   const { open, close } = useModalActions(MODAL_KEY);
 
   // ...some code
 
   return (
     <>
-      <button onClick={open}>OPEN</button>
+      <button onClick={() => open('42')}>OPEN</button>
 
-      {modalIsOpen && (
+      {!!modalValue && (
         <div>
-          <h1>It is my modal!</h1>
+          <h1>It is modal {modalValue}!</h1>
           <button onClick={close}>CLOSE</button>
         </div>
       )}
