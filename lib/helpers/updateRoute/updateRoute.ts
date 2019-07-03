@@ -1,13 +1,17 @@
 import { getNewPathname } from './getNewPathname'
-import { PushRoute } from '../PushRoute'
+import { RouteMethod } from '../RouteMethod'
+import { getRouterMethod } from './getRouterMethod'
 
 export const updateRoute = (
-  pushRoute: PushRoute,
+  pushRoute: RouteMethod,
+  replaceRoute: RouteMethod,
   keyName: string,
   keyValue?: string,
+  withoutHistory?: boolean,
 ) => {
   const { pathname, search } = window.location
   const newPathname = getNewPathname(search, keyName, keyValue, pathname)
+  const routerMethod = getRouterMethod(pushRoute, replaceRoute, withoutHistory)
 
-  return pushRoute(newPathname)
+  return routerMethod(newPathname)
 }

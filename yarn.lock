@@ -98,13 +98,14 @@
     to-fast-properties "^2.0.0"
 
 "@breadhead/use-query@>= 0.3":
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/@breadhead/use-query/-/use-query-0.3.0.tgz#e97c64c95a16018bc45ad507be851b398ec757f7"
-  integrity sha512-iu0LB0F6z2oC6cdaGPvyfhzoqZDqZxCXq78VEZ8tNJZHA8ncjJQvxELNXavZvGScfhbVJIO6+8Dbq43SOJKy3A==
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@breadhead/use-query/-/use-query-1.0.0.tgz#ab806315fee253b682715a5a43aa0ef7a5555eaf"
+  integrity sha512-B1f47TlqPxDiAoum6zMt+5f1JQpXe3z7ThdOCiZBF5T15OoYoiGQn3GFFClLadiYJNlRc04RkGKUEC+2n5JKFA==
   dependencies:
     lodash.isequal "^4.5.0"
     lodash.mapvalues "^4.6.0"
     qs "^6.7.0"
+    react-shallow-context "^1.0.1"
 
 "@commitlint/cli@7":
   version "7.5.2"
@@ -3191,6 +3192,13 @@ react-is@^16.8.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.8.6.tgz#5bbc1e2d29141c9fbdfed456343fe2bc430a6a16"
   integrity sha512-aUk3bHfZ2bRSVFFbbeVS4i+lNPZr3/WM5jT2J5omUVV1zzcs1nAaf3l51ctA5FFvCRbhrH0bdAsRRQddFJZPtA==
 
+react-shallow-context@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-shallow-context/-/react-shallow-context-1.0.1.tgz#fbcd82d0fe59fe67c7e68e94e6c231845ca3188d"
+  integrity sha512-dSxNvL7eG4WIj4U8iWYJUZOiZKWH/6bupu1YMnyklH53I0WrehuU5PkJJMX5gE1VIRxwLFmIvvi3rBpWbvE6uQ==
+  dependencies:
+    shallow-equal "^1.0.0"
+
 "react@>= 16.8":
   version "16.8.6"
   resolved "https://registry.yarnpkg.com/react/-/react-16.8.6.tgz#ad6c3a9614fd3a4e9ef51117f54d888da01f2bbe"
@@ -3495,6 +3503,11 @@ set-value@^2.0.0:
     is-extendable "^0.1.1"
     is-plain-object "^2.0.3"
     split-string "^3.0.1"
+
+shallow-equal@^1.0.0:
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/shallow-equal/-/shallow-equal-1.2.0.tgz#fd828d2029ff4e19569db7e19e535e94e2d1f5cc"
+  integrity sha512-Z21pVxR4cXsfwpMKMhCEIO1PCi5sp7KEp+CmOpBQ+E8GpHwKOw2sEzk7sgblM3d/j4z4gakoWEoPcjK0VJQogA==
 
 shebang-command@^1.2.0:
   version "1.2.0"

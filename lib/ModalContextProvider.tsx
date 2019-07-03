@@ -1,15 +1,20 @@
 import React from 'react'
 
 import { ModalContext } from './ModalContext'
-import { PushRoute } from './helpers/PushRoute'
+import { RouteMethod } from './helpers/RouteMethod'
 
 interface Props {
   children: React.ReactNode
-  pushRoute: PushRoute
+  pushRoute: RouteMethod
+  replaceRoute?: RouteMethod
 }
 
-export const ModalContextProvider = ({ children, pushRoute }: Props) => (
-  <ModalContext.Provider value={{ pushRoute }}>
+export const ModalContextProvider = ({
+  children,
+  pushRoute,
+  replaceRoute = null,
+}: Props) => (
+  <ModalContext.Provider value={{ pushRoute, replaceRoute }}>
     {children}
   </ModalContext.Provider>
 )
