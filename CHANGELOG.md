@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+# [1.2.0](https://github.com/breadhead/use-modal/compare/v1.1.1...v1.2.0) (2019-07-03)
+
+
+### Bug Fixes
+
+* **app:** fixes ([787e998](https://github.com/breadhead/use-modal/commit/787e998))
+* **update route:** add replace-route prop ([4e295e2](https://github.com/breadhead/use-modal/commit/4e295e2))
+
+
+### Features
+
+* **update-route:** add withoutHistory prop ([e95cfa5](https://github.com/breadhead/use-modal/commit/e95cfa5))
+
+
+
 ## [1.1.1](https://github.com/breadhead/use-modal/compare/v1.1.0...v1.1.1) (2019-05-09)
 
 

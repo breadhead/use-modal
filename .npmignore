@@ -7,3 +7,4 @@ tslint.json
 jest.config.js
 **/__tests__/*
 jest.config.js
+package-lock.json
