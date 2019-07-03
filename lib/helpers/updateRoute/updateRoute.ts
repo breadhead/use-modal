@@ -1,11 +1,10 @@
 import { getNewPathname } from './getNewPathname'
-import { PushRoute } from '../PushRoute'
-import { ReplaceRoute } from 'helpers/ReplaceRoute'
+import { RouteMethod } from '../RouteMethod'
 import { getRouterMethod } from './getRouterMethod'
 
 export const updateRoute = (
-  pushRoute: PushRoute,
-  replaceRoute: ReplaceRoute,
+  pushRoute: RouteMethod,
+  replaceRoute: RouteMethod,
   keyName: string,
   keyValue?: string,
   withoutHistory?: boolean,

@@ -1,15 +1,13 @@
-import { ReplaceRoute } from 'helpers/ReplaceRoute'
-import { PushRoute } from 'helpers/PushRoute'
+import { RouteMethod } from '../RouteMethod'
 
 export const getRouterMethod = (
-  pushRoute: PushRoute,
-  replaceRoute?: ReplaceRoute,
+  pushRoute: RouteMethod,
+  replaceRoute?: RouteMethod,
   withoutHistory?: boolean,
 ) => {
-  if (withoutHistory) {
-    if (!!replaceRoute) {
-      return replaceRoute
-    }
+  if (withoutHistory && !!replaceRoute) {
+    return replaceRoute
   }
+
   return pushRoute
 }

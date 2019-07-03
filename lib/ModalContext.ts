@@ -1,13 +1,17 @@
 import * as React from 'react'
 
-import { PushRoute } from './helpers/PushRoute'
+import { RouteMethod } from './helpers/RouteMethod'
 
 interface ModalContextValue {
-  pushRoute: PushRoute
+  pushRoute: RouteMethod
+  replaceRoute?: RouteMethod
 }
 
 export const ModalContext = React.createContext<ModalContextValue>({
   pushRoute: () => {
+    // pass
+  },
+  replaceRoute: () => {
     // pass
   },
 })
