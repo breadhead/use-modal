@@ -63,9 +63,9 @@ export const ContactsModal = () => {
 
 If you want use it with SSR, just read the documentation of [`@breadhead/use-query`](https://github.com/breadhead/use-query).
 
-## Without history
+### Without history
 
-In case of you want to hide routes history from user (for prevent going on previous page, for example) you can use withoutHistory prop:
+In case of you want to hide routes history from user (e.g. for prevent going on previous page) you can pass true as second argument to useModalActions hook:
 
 1. pass the replaceRoute method to your `<ModalContextProvider />` like this:
 
@@ -127,4 +127,3 @@ export const ContactsModal = () => {
   )
 }
 ```
-and after click on 'prev' button in browser, you will find yourself on second last page
